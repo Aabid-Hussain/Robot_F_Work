@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170419 09:07:07.695" generator="Robot 3.0.2 (Python 2.7.12 on win32)">
+<suite source="E:\ME\RobertFrameWork\FirstTest.robot" id="s1" name="FirstTest">
+<test id="s1-t1" name="LoginTest">
+<kw name="Open Connection" library="Telnet">
+<doc>Opens a new Telnet connection to the given host and port.</doc>
+<arguments>
+<arg>${R1}</arg>
+<arg>prompt=username</arg>
+<arg>prompt=password</arg>
+<arg>port=23</arg>
+</arguments>
+<msg timestamp="20170419 09:07:07.726" level="INFO">Opening connection to 192.168.1.1:23 with prompt: password</msg>
+<status status="PASS" endtime="20170419 09:07:07.773" starttime="20170419 09:07:07.726"></status>
+</kw>
+<kw name="Read Until" library="Telnet">
+<doc>Reads output until ``expected`` text is encountered.</doc>
+<arguments>
+<arg>Username:</arg>
+</arguments>
+<msg timestamp="20170419 09:07:07.804" level="INFO">User Access Verification
+
+Username:</msg>
+<status status="PASS" endtime="20170419 09:07:07.804" starttime="20170419 09:07:07.773"></status>
+</kw>
+<kw name="Write" library="Telnet">
+<doc>Writes the given text plus a newline into the connection.</doc>
+<arguments>
+<arg>${username1}</arg>
+</arguments>
+<msg timestamp="20170419 09:07:07.835" level="INFO">Net_Script</msg>
+<status status="PASS" endtime="20170419 09:07:07.835" starttime="20170419 09:07:07.804"></status>
+</kw>
+<kw name="Read Until" library="Telnet">
+<doc>Reads output until ``expected`` text is encountered.</doc>
+<arguments>
+<arg>Password:</arg>
+</arguments>
+<msg timestamp="20170419 09:07:07.835" level="INFO">Password:</msg>
+<status status="PASS" endtime="20170419 09:07:07.835" starttime="20170419 09:07:07.835"></status>
+</kw>
+<kw name="Write" library="Telnet">
+<doc>Writes the given text plus a newline into the connection.</doc>
+<arguments>
+<arg>${password1}</arg>
+</arguments>
+<status status="PASS" endtime="20170419 09:07:07.960" starttime="20170419 09:07:07.835"></status>
+</kw>
+<kw name="Read Until" library="Telnet">
+<doc>Reads output until ``expected`` text is encountered.</doc>
+<arguments>
+<arg>DUT&gt;</arg>
+</arguments>
+<msg timestamp="20170419 09:07:07.960" level="INFO">DUT&gt;</msg>
+<status status="PASS" endtime="20170419 09:07:07.960" starttime="20170419 09:07:07.960"></status>
+</kw>
+<kw name="Write" library="Telnet">
+<doc>Writes the given text plus a newline into the connection.</doc>
+<arguments>
+<arg>enable</arg>
+</arguments>
+<msg timestamp="20170419 09:07:07.976" level="INFO">enable</msg>
+<status status="PASS" endtime="20170419 09:07:07.976" starttime="20170419 09:07:07.960"></status>
+</kw>
+<kw name="Read Until" library="Telnet">
+<doc>Reads output until ``expected`` text is encountered.</doc>
+<arguments>
+<arg>Password:</arg>
+</arguments>
+<msg timestamp="20170419 09:07:07.976" level="INFO">Password:</msg>
+<status status="PASS" endtime="20170419 09:07:07.976" starttime="20170419 09:07:07.976"></status>
+</kw>
+<kw name="Write" library="Telnet">
+<doc>Writes the given text plus a newline into the connection.</doc>
+<arguments>
+<arg>dut</arg>
+</arguments>
+<status status="PASS" endtime="20170419 09:07:07.992" starttime="20170419 09:07:07.976"></status>
+</kw>
+<kw name="Read Until" library="Telnet">
+<doc>Reads output until ``expected`` text is encountered.</doc>
+<arguments>
+<arg>DUT#</arg>
+</arguments>
+<msg timestamp="20170419 09:07:07.992" level="INFO">DUT#</msg>
+<status status="PASS" endtime="20170419 09:07:07.992" starttime="20170419 09:07:07.992"></status>
+</kw>
+<kw name="Write" library="Telnet">
+<doc>Writes the given text plus a newline into the connection.</doc>
+<arguments>
+<arg>show ip inter br</arg>
+</arguments>
+<msg timestamp="20170419 09:07:08.038" level="INFO">show ip inter br</msg>
+<status status="PASS" endtime="20170419 09:07:08.038" starttime="20170419 09:07:07.992"></status>
+</kw>
+<status status="PASS" endtime="20170419 09:07:08.038" critical="yes" starttime="20170419 09:07:07.726"></status>
+</test>
+<status status="PASS" endtime="20170419 09:07:08.038" starttime="20170419 09:07:07.695"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="FirstTest" pass="1">FirstTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
