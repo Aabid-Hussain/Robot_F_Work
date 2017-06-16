@@ -1,0 +1,17 @@
+| *Setting*    | *Value*         |
+| Library      | OperatingSystem |
+
+
+| *Variable*   | *Value*         |
+| ${MESSAGE}   | Hello, world!   |
+
+
+| *Test Case*  | *Action*        | *Argument*   |
+| My Test      | [Documentation] | Example test |
+|              | Log             | ${MESSAGE}   |
+|              | My Keyword      | /tmp         |
+| Another Test | Should Be Equal | ${MESSAGE}   | Hello, world!
+
+| *Keyword*    |
+| My Keyword   | [Arguments]     | ${path}
+|              | Directory Should Exist       | ${path}
